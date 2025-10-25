@@ -40,7 +40,7 @@ func handle_drag(event: InputEventScreenDrag):
 	
 	if touch_points.size() == 1:
 		if can_pan:
-			offset -= event.relative.rotated(rotation) * pan_speed
+			offset -= event.relative.rotated(rotation) * pan_speed /zoom.x
 			
 	elif touch_points.size() == 2:
 		var touch_point_positions = touch_points.values()
